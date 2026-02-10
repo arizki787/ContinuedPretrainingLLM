@@ -1,0 +1,7 @@
+Colab Notebooks/*
+qwen-cybersec-pretrained/*
+results/*
+splitted_datasets_default/*
+models
+answer_mcq
+*.env*
