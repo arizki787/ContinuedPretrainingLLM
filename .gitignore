@@ -5,8 +5,9 @@ splitted_datasets_default/*
 models/*
 answer_mcq/*
 datasets/*
-*.env*
+.env
 unsloth_compiled_cache
+_unsloth_temporary*
 # Keep folder structure in git (content is still ignored)
 !models/.gitkeep
 !answer_mcq/.gitkeep
