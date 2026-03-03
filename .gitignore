@@ -10,7 +10,7 @@ unsloth_compiled_cache
 _unsloth_temporary*
 # Keep folder structure in git (content is still ignored)
 !models/.gitkeep
-!answer_mcq/.gitkeep
+!models/base/.gitkeep
+!models/finetuned/.gitkeep
 !datasets/.gitkeep
 !results/.gitkeep
-!splitted_datasets_default/.gitkeep
