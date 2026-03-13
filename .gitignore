@@ -8,8 +8,10 @@ datasets/*
 .env
 unsloth_compiled_cache
 _unsloth_temporary*
+*SANDBOX*
 # Keep folder structure in git (content is still ignored)
 !models/.gitkeep
+!models/checkpoints/.gitkeep
 !models/base/.gitkeep
 !models/finetuned/.gitkeep
 !datasets/.gitkeep
