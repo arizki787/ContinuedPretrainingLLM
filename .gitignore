@@ -9,10 +9,11 @@ datasets/*
 unsloth_compiled_cache
 _unsloth_temporary*
 *SANDBOX*
+primus-seed-tokenized/*
 # Keep folder structure in git (content is still ignored)
 !models/.gitkeep
 !models/checkpoints/.gitkeep
 !models/base/.gitkeep
 !models/finetuned/.gitkeep
-!datasets/.gitkeep
+!data/.gitkeep
 !results/.gitkeep
