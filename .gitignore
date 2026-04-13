@@ -4,13 +4,14 @@ results/*
 splitted_datasets_default/*
 models/*
 answer_mcq/*
-datasets/*
+data/*
 .env
 unsloth_compiled_cache
 _unsloth_temporary*
 *SANDBOX*
 primus-seed-tokenized/*
 # Keep folder structure in git (content is still ignored)
+!data/evaluation_dataset_splitted.csv
 !models/.gitkeep
 !models/checkpoints/.gitkeep
 !models/base/.gitkeep
