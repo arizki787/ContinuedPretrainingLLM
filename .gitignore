@@ -7,6 +7,7 @@ data/*
 unsloth_compiled_cache
 _unsloth_temporary*
 *SANDBOX*
+.venv
 
 # Keep folder structure in git (content is still ignored)
 !data/evaluation_dataset_splitted.csv
