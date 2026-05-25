@@ -1,20 +1,20 @@
 Colab Notebooks/*
-qwen-cybersec-pretrained/*
+logs/*
 results/*
-splitted_datasets_default/*
 models/*
-answer_mcq/*
 data/*
 .env
 unsloth_compiled_cache
 _unsloth_temporary*
 *SANDBOX*
-primus-seed-tokenized/*
+.venv
+
 # Keep folder structure in git (content is still ignored)
 !data/evaluation_dataset_splitted.csv
+!logs/.gitkeep
 !models/.gitkeep
 !models/checkpoints/.gitkeep
 !models/base/.gitkeep
-!models/finetuned/.gitkeep
+!models/finetuned/.gitkeepe
 !data/.gitkeep
 !results/.gitkeep
