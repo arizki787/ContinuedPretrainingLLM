@@ -30,7 +30,10 @@ The core workflows are divided into the following Jupyter Notebooks:
   Used for performing the MCQ tests on the evaluation dataset. It loads models (both remote base models and local fine-tuned adapters), processes the `cti-mcq` prompts using greedy decoding, and generates predictions to calculate the model's accuracy.
 
 - **`LLM_PERFORMANCE_EVAL.ipynb`**
-  Used to compare the results of the LLM performance. It visualizes the evaluation metrics (e.g., correct answer percentages) across different models (e.g., Qwen 1.5B, Qwen 7B, Llama 8B - base vs. fine-tuned) using cleanly formatted plots.
+  Used to compare the results of the LLM performance. It visualizes the evaluation metrics (e.g., correct answer percentages) across different models (Llama-3.2-3B, Llama-3.1-8B, Qwen2.5-3B, and Qwen2.5-7B - base vs. fine-tuned) using cleanly formatted plots.
+
+- **`RESOURCE_USAGE.ipynb`**
+  Monitors and visualizes the resource usage during the continued pretraining process by parsing the generated log files in the `logs/` directory.
 
 ## Setup and Requirements
 
