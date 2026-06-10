@@ -2,7 +2,6 @@ Colab Notebooks/*
 logs/*
 results/*
 models/*
-data/*
 .env
 unsloth_compiled_cache
 _unsloth_temporary*
@@ -10,7 +9,6 @@ _unsloth_temporary*
 .venv
 
 # Keep folder structure in git (content is still ignored)
-!data/evaluation_dataset_splitted.csv
 !logs/.gitkeep
 !models/.gitkeep
 !models/checkpoints/.gitkeep
