@@ -13,6 +13,6 @@ _unsloth_temporary*
 !models/.gitkeep
 !models/checkpoints/.gitkeep
 !models/base/.gitkeep
-!models/finetuned/.gitkeepe
+!models/finetuned/.gitkeep
 !data/.gitkeep
 !results/.gitkeep
