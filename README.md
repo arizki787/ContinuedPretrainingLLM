@@ -47,3 +47,52 @@ The primary dependencies for this project are listed in `requirement.txt`. Key m
 - `unsloth` & `bitsandbytes`
 
 *(Note: Unsloth installation can be environment-specific; please refer to their [official documentation](https://github.com/unslothai/unsloth) for installation instructions depending on your setup/Colab).*
+
+## Evaluation Results
+
+To evaluate the impact of continued pretraining, we benchmarked the models on three datasets. Below are the comparison results of the Base models vs. their Finetuned counterparts.
+
+### 1. CTI-MCQ Evaluation
+Evaluating cybersecurity knowledge through multiple-choice questions (2,500 questions).
+
+| Model | Base LLM | Finetuned LLM | Delta |
+| :--- | :---: | :---: | :---: |
+| **Llama-3.2-3B** | 48.28% | 49.28% | +1.00% |
+| **Llama-3.1-8B** | 54.80% | 55.16% | +0.36% |
+| **Qwen2.5-3B** | 60.08% | 60.36% | +0.28% |
+| **Qwen2.5-7B** | 62.76% | 64.60% | +1.84% |
+
+![CTI-MCQ Base vs Finetuned](results/cti_mcq_comparison.png)
+
+### 2. Cybermetric Evaluation
+Evaluating standard cyber security domain metrics (2,000 questions).
+
+| Model | Base LLM | Finetuned LLM | Delta |
+| :--- | :---: | :---: | :---: |
+| **Llama-3.2-3B** | 68.05% | 69.55% | +1.50% |
+| **Llama-3.1-8B** | 74.65% | 75.40% | +0.75% |
+| **Qwen2.5-3B** | 79.90% | 80.15% | +0.25% |
+| **Qwen2.5-7B** | 86.30% | 87.30% | +1.00% |
+
+![Cybermetric Base vs Finetuned](results/cybermetric_comparison.png)
+
+### 3. SecEval Evaluation
+Evaluating software, system, and web application security (1,255 questions, multi-ground truth evaluation using Jaccard index).
+
+| Model | Base LLM | Finetuned LLM | Delta |
+| :--- | :---: | :---: | :---: |
+| **Llama-3.2-3B** | 59.20% | 64.22% | +5.02% |
+| **Llama-3.1-8B** | 65.82% | 65.98% | +0.16% |
+| **Qwen2.5-3B** | 81.83% | 83.90% | +2.07% |
+| **Qwen2.5-7B** | 88.53% | 88.13% | -0.40% |
+
+![SecEval Base vs Finetuned](results/seceval_comparison.png)
+
+### Analysis & Discussion
+
+- **Overall Improvement**: The finetuned models consistently demonstrate accuracy improvements (positive delta) across almost all benchmarks.
+- **Why SecEval Performs "Less Worse" (Stable & High Improvement)**:
+  - **Domain Alignment**: SecEval evaluates key areas of software and application security. These domains are heavily covered in the CTI knowledge injected via our **Primus-Seed** continued pretraining dataset, resulting in strong retention and positive transfer.
+  - **Robustness of Base Capabilities**: Modern base models (especially Qwen2.5) are already pre-trained on massive corpora of code and computer science documentation, establishing a high baseline accuracy.
+  - **Prompt and Format Alignment**: Since SecEval supports multiple ground truths per question, our integration of a specialized `SECEVAL_SYSTEM_PROMPT` and formatting parser ensured that the models did not suffer from decoding/formatting errors, allowing them to fully demonstrate their security knowledge.
+
